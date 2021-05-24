@@ -31,3 +31,5 @@ npm start
 ```
 
 Connection to mongo can be made with the super insecure url in the code here(https://github.com/Elko-Lemiso/wsTest/blob/fae629eb2435e5667b83176e33e85acdbd7aad0b/server/index.js#L16).
+
+You can use the localhost:3001/graphql to run mutations, or the react frontend.
