@@ -7,7 +7,8 @@ This uses
 
 ## How to test
 
-Clone the repo
+Fork then Clone the repo.
+When complete run ...
 
 ```bash
 cd server
