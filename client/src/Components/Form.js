@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import {CREATE_USER_MUTATION} from '../GraphQL/Mutations'
 import { useMutation } from "@apollo/client";
 
+//This is a testing site for testing the GraphQL schema.
 
 function Form() {
+  //Declare states of variables
   const [job_title, setJob_title] = useState("");
   const [job_department, setJob_department] = useState("");
   const [linkedIn, setLinkedIn] = useState("");
@@ -33,6 +35,7 @@ function Form() {
 
   const [createUser, {error}] = useMutation(CREATE_USER_MUTATION);
 
+  //add user mutation
   const addUser = () =>{
       createUser({
           variables:{
@@ -70,6 +73,7 @@ function Form() {
       }
   };
 
+  //Form HTML , TODO : styling ??
   return (
     <div>
       <input
@@ -255,6 +259,7 @@ function Form() {
         }}
       />
       <button onClick={addUser}> Create User</button>
+      {/* CLICK BTN */}
     </div>
   );
 }

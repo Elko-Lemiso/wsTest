@@ -7,13 +7,15 @@ const mongoose = require('mongoose');
 const cors = require('cors')
 
 
-//Fix cors errors
+//Fixing cors errors like dis //
 app.use(cors())
 
-mongoose
+//connect to mongo => SUPER INSECURE, should use .env but whats the harm on a test, TODO:
+
+mongoose 
     .connect('mongodb+srv://DataBaseUser:BSFzhlCcAocSN98z@graphql-cluster.fye5b.mongodb.net/UserData?retryWrites=true&w=majority')
     .then(()=>{
-        console.log('conneted to database');
+        console.log('conneted to database, sick!');
     })
     .then(() => {
         app.listen(PORT, ()=>{
@@ -24,6 +26,7 @@ mongoose
             schema,
             graphiql: true
         }));
+        
     })
     .catch(err => {
         console.log(err);

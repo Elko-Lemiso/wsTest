@@ -1,5 +1,6 @@
 import {gql} from '@apollo/client';
 
+//query time
 export const LOAD_USERS = gql`
     query{
         getAllUsers{

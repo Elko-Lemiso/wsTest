@@ -1,5 +1,6 @@
 import {gql} from '@apollo/client'
 
+//massive graphql mutation
 export const CREATE_USER_MUTATION = gql`
     mutation createUser( 
         $job_title: String!

@@ -1,6 +1,8 @@
 const graphql = require("graphql");
 const {GraphQLObjectType, GraphQLInt, GraphQLInputObjectType, GraphQLString} = graphql
 
+// GraphQL Object Type, 
+// TODO : Figure out how to do nested objects .... 
 
 const UserType = new GraphQLObjectType({
     name : 'user',

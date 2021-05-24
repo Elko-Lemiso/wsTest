@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
+
+
+// Creating the Mongoose Schema for MongoDB
 
 const JobSchema = new Schema({
     job_title: { required : true, type : String},
@@ -45,6 +47,7 @@ const ThemesSchema = new Schema({
     themesTopics : { required : true, type : String}
 })
 
+// Who doesnt like nested schemas??
 const UserSchema = new Schema({
     job: JobSchema,
     location : LocationSchema,

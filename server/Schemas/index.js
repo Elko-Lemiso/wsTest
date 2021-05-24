@@ -29,6 +29,7 @@ const Mutation = new GraphQLObjectType({
         createUser:{
             type: UserType,
             args : {
+                //lotsa args
                 job_title: { type: GraphQLString },
                 job_department: { type: GraphQLString },
                 linkedIn: { type: GraphQLString },
@@ -57,6 +58,8 @@ const Mutation = new GraphQLObjectType({
                 introduction: { type : GraphQLString},
             },
             resolve(parents, args){
+                //create object in DB with custom model
+                //Would be cool if GQL object mapped directly
                 const newUserData = new UserModel({
                     job: {
                         job_title: args.job_title,
